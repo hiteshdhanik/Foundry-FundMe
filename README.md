@@ -1,17 +1,29 @@
-## Foundry
+# Foundry-FundMe
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository is a project built with Foundry, a fast and modular toolkit for Ethereum application development. It integrates key features from Foundry tools like Forge for Ethereum testing, Cast for interacting with smart contracts, Anvil for a local Ethereum node, and Chisel for a Solidity REPL.
 
-Foundry consists of:
+## Features
+- Fund transfer and withdrawal functionalities.
+- Written in Solidity, with tests and deployment scripts.
+- **Forge**: Ethereum testing framework.
+- **Cast**: A tool for smart contract interaction.
+- **Anvil**: Local Ethereum node.
+- **Chisel**: A Solidity REPL.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Setup
+To get started with the project:
 
-## Documentation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/hiteshdhanik/Foundry-FundMe.git
+   cd Foundry-FundMe
+   ```
 
-https://book.getfoundry.sh/
+2. Install dependencies:
+    ```bash
+    forge install
+    ```
+    
 
 ## Usage
 
