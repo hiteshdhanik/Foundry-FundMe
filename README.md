@@ -10,69 +10,76 @@ This repository is a project built with Foundry, a fast and modular toolkit for 
 - **Anvil**: Local Ethereum node.
 - **Chisel**: A Solidity REPL.
 
-## Setup
-To get started with the project:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/hiteshdhanik/Foundry-FundMe.git
-   cd Foundry-FundMe
-   ```
+# Getting Started
+  
+## Requirements
 
-2. Install dependencies:
-    ```bash
-    forge install
-    ```
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- [foundry](https://getfoundry.sh/)
+  - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)`
+
     
 
-## Usage
+# Usage
 
-### Build
+## Deploy
 
-```shell
-$ forge build
+```
+forge script script/DeployFundMe.s.sol
 ```
 
-### Test
 
-```shell
-$ forge test
+## Testing
+
+1. Unit
+2. Integration
+3. Forked
+4. Staging
+
+This repo covers #1 and #3. 
+
+```
+forge test
 ```
 
-### Format
+or 
+
+```
+// Only run test functions matching the specified regex pattern.
+
+"forge test -m testFunctionName" is deprecated. Please use 
+
+forge test --match-test testFunctionName
+```
+
+or
+
+```
+forge test --fork-url $SEPOLIA_RPC_URL
+```
+
+### Test Coverage
+
+```
+forge coverage
+```
+
+## Format
 
 ```shell
 $ forge fmt
 ```
 
-### Gas Snapshots
+## Gas Snapshots
 
 ```shell
 $ forge snapshot
 ```
 
-### Anvil
+## Anvil
 
 ```shell
 $ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
