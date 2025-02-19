@@ -17,7 +17,7 @@ contract FundMeTest is Test {
     uint256 constant GAS_PRICE = 1;
 
     address public constant USER = address(1);
-    
+
     function setUp() external {
         // us calling -> FundMeTest, it calling -> FundMe; therefore onwer == FundMeTest for FundMe not msg.sender
         DeployFundMe deployFundMe = new DeployFundMe();

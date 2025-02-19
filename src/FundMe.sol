@@ -78,7 +78,6 @@ contract FundMe {
         require(callSuccess, "Call failed");
     }
 
-
     /**
      * Getter Functions
      */
@@ -107,7 +106,7 @@ contract FundMe {
     function getPriceFeed() public view returns (AggregatorV3Interface) {
         return s_priceFeed;
     }
-    
+
     // Explainer from: https://solidity-by-example.org/fallback/
     // Ether is sent to contract
     //      is msg.data empty?
