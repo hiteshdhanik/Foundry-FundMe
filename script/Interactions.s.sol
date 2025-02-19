@@ -1,5 +1,4 @@
-// SPDX-License-Identifier: SEE LICENSE IN LICENSE
-
+// SPDX-License-Identifier: MIT
 // Fund
 // Withdraw
 
