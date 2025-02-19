@@ -4,19 +4,24 @@ pragma solidity ^0.8.28;
 import {Test, console} from "forge-std/Test.sol";
 import {FundMe} from "../../src/FundMe.sol";
 import {DeployFundMe} from "../../script/DeployFundMe.s.sol";
+import {HelperConfig, CodeConstants} from "../../script/HelperConfig.s.sol";
+import {StdCheats} from "forge-std/StdCheats.sol";
+import {MockV3Aggregator} from "../mocks/MockV3Aggregator.sol";
 
 contract FundMeTest is Test {
-    FundMe fundMe;
+    FundMe public fundMe;
+    HelperConfig public helperConfig;
 
-    address USER = makeAddr("user"); // foundry test cheatcode
     uint256 constant SEND_VALUE = 0.1 ether; // 100000000000000000
     uint256 constant STARTING_BALANCE = 10 ether;
     uint256 constant GAS_PRICE = 1;
 
+    address public constant USER = address(1);
+    
     function setUp() external {
         // us calling -> FundMeTest, it calling -> FundMe; therefore onwer == FundMeTest for FundMe not msg.sender
         DeployFundMe deployFundMe = new DeployFundMe();
-        fundMe = deployFundMe.run();
+        (fundMe,) = deployFundMe.run();
         vm.deal(USER, STARTING_BALANCE); // foundry test cheatcode
     }
 
