@@ -23,32 +23,32 @@ cd Foundry-FundMe
 forge install
 ``` 
 
-## Usage
+## 🚀 Usage
 ### 🏗  Build the project
 ```
 forge build
 ```
 
-## ✅ Run tests
+### ✅ Run tests
 ```
 forge test
 
 ```
 
-## 🚢 Deploy contract
+### 🚢 Deploy contract
 
 ```
 forge script script/DeployFundMe.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
 
 
-## 🔗 Interact with the contract
+### 🔗 Interact with the contract
 You can use Foundry's `cast` tool to interact with deployed contracts.
 ```
 cast send <contract_address> --rpc-url <your_rpc_url> --private-key <your_private_key> --value 1ether
 ```
 
-## 📂 Directory Structure
+### 📂 Directory Structure
 ```
 Foundry-FundMe/
 │── 📁 src/            # Solidity contracts
@@ -59,11 +59,11 @@ Foundry-FundMe/
 │── 🛠 Makefile        # Build and test commands
 ```
 
-## 📜 License
+### 📜 License
 This project is licensed under the MIT License.
 
-## 🙌 Acknowledgments
-📖 Foundry
-💡 Solidity Community
+### 🙌 Acknowledgments
+- 📖 [Foundry](https://book.getfoundry.sh/getting-started/installation.html)
+- 💡 Solidity Community
 
-## 🚀 Happy Building! 🎉
+### 🚀 Happy Building! 🎉
